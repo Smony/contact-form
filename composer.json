@@ -1,0 +1,19 @@
+{
+    "name": "smony/contact",
+    "description": "This send email",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Smony",
+            "email": "dev@smony.com.ua"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Smony\\Contact\\": "src/"
+        }
+    }
+}
