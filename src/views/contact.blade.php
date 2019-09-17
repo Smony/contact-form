@@ -592,7 +592,7 @@
         <div class="row">
             <!-- Section Titile -->
             <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                <h1 class="section-title">Love to Hear From You</h1>
+                <h1 class="section-title">{{ trans('contact.welcome') }}</h1>
             </div>
         </div>
         <div class="row">
@@ -603,7 +603,7 @@
                     distribution of letters, as opposed to using Content.</p>
 
                 <div class="find-widget">
-                    Company: <a href="https://hostriver.ro">HostRiver</a>
+                    Company: <a href="#">HostRiver</a>
                 </div>
                 <div class="find-widget">
                     Address: <a href="#">4435 Berkshire Circle Knoxville</a>
@@ -613,7 +613,7 @@
                 </div>
 
                 <div class="find-widget">
-                    Website: <a href="https://uny.ro">www.uny.ro</a>
+                    Website: <a href="#">www.site.com</a>
                 </div>
                 <div class="find-widget">
                     Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>

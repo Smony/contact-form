@@ -34,7 +34,8 @@ class ContactController extends Controller
         if ($attributes) {
             Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->message, $request->name));
             Contact::create($attributes);
-            return response()->json(['success' => 'Added new records.']);
+//            return response()->json(['success' => 'Added new records.']);
+            return redirect(route('contact'));
         }
     }
 }
