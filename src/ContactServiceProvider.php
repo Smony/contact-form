@@ -33,12 +33,23 @@ class ContactServiceProvider extends ServiceProvider
         );
 
         $this->publishes([
+            __DIR__.'/views' => resource_path('views/contact'),
             __DIR__ . '/config/contact.php' => config_path('contact.php'),
+            __DIR__.'/resources/lang' => resource_path('lang'),
+
         ], 'contact');
 
-        $this->publishes([
-            __DIR__.'/resources/lang' => resource_path('lang'),
-        ], 'contact');
+//        $this->publishes([
+//            __DIR__.'/views' => resource_path('views/contact'),
+//        ], 'contact');
+
+//        $this->publishes([
+//            __DIR__ . '/config/contact.php' => config_path('contact.php'),
+//        ], 'contact');
+
+//        $this->publishes([
+//            __DIR__.'/resources/lang' => resource_path('lang'),
+//        ], 'contact');
 
         $this->commands([
             Console\ContactCommand::class,
