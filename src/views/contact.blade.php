@@ -5,19 +5,23 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
     <style>
         @import url("https://fonts.googleapis.com/css?family=Rubik:500,700|Roboto:400,600");
+
         .section-padding {
             padding: 45px 0;
         }
+
         .section-dark {
             background-color: #f9f9f9;
             z-index: -2;
         }
+
         .form-control,
         .form-group .form-control {
             border: 0;
@@ -200,7 +204,7 @@
             resize: none
         }
 
-        .form-group textarea~.form-control-highlight {
+        .form-group textarea ~ .form-control-highlight {
             margin-top: -11px
         }
 
@@ -210,7 +214,7 @@
             appearance: none
         }
 
-        .form-group select~.material-input:after {
+        .form-group select ~ .material-input:after {
             display: none
         }
 
@@ -238,6 +242,7 @@
             color: #BDBDBD;
             font-weight: 400
         }
+
         .checkbox label,
         .radio label,
         label {
@@ -326,7 +331,7 @@
             line-height: 1.07142857
         }
 
-        .form-group.label-floating input.form-control:-webkit-autofill~label.control-label label.control-label {
+        .form-group.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
             top: -30px;
             left: 0;
             font-size: 12px;
@@ -400,7 +405,7 @@
             line-height: 1.125
         }
 
-        .form-group.form-group-sm.label-floating input.form-control:-webkit-autofill~label.control-label label.control-label {
+        .form-group.form-group-sm.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
             top: -25px;
             left: 0;
             font-size: 9px;
@@ -474,7 +479,7 @@
             line-height: .99999998
         }
 
-        .form-group.form-group-lg.label-floating input.form-control:-webkit-autofill~label.control-label label.control-label {
+        .form-group.form-group-lg.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
             top: -32px;
             left: 0;
             font-size: 14px;
@@ -531,6 +536,7 @@
             height: 100%;
             z-index: 100
         }
+
         .contact-widget-section .single-contact-widget {
             background: #f9f9f9;
             padding: 20px 25px;
@@ -580,76 +586,118 @@
 </head>
 <body>
 
-    <!-- Contact Us Section -->
-    <section class="Material-contact-section section-padding section-dark">
-        <div class="container">
-            <div class="row">
-                <!-- Section Titile -->
-                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                    <h1 class="section-title">Love to Hear From You</h1>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Section Titile -->
-                <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content.</p>
-
-                    <div class="find-widget">
-                        Company:  <a href="https://hostriver.ro">HostRiver</a>
-                    </div>
-                    <div class="find-widget">
-                        Address: <a href="#">4435 Berkshire Circle Knoxville</a>
-                    </div>
-                    <div class="find-widget">
-                        Phone:  <a href="#">+ 879-890-9767</a>
-                    </div>
-
-                    <div class="find-widget">
-                        Website:  <a href="https://uny.ro">www.uny.ro</a>
-                    </div>
-                    <div class="find-widget">
-                        Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
-                    </div>
-                </div>
-                <!-- contact form -->
-                <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
-                    <form action="{{ route('contact') }}" class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
-                        {{ csrf_field() }}
-                        <!-- Name -->
-                        <div class="form-group label-floating">
-                            <label class="control-label" for="name">Name</label>
-                            <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- email -->
-                        <div class="form-group label-floating">
-                            <label class="control-label" for="email">Email</label>
-                            <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- Subject -->
-                        <div class="form-group label-floating">
-                            <label class="control-label">Subject</label>
-                            <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- Message -->
-                        <div class="form-group label-floating">
-                            <label for="message" class="control-label">Message</label>
-                            <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- Form Submit -->
-                        <div class="form-submit mt-5">
-                            <button class="btn btn-common" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
-                            <div id="msgSubmit" class="h3 text-center hidden"></div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </form>
-                </div>
+<!-- Contact Us Section -->
+<section class="Material-contact-section section-padding section-dark">
+    <div class="container">
+        <div class="row">
+            <!-- Section Titile -->
+            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="section-title">{{ trans('contact.welcome') }}</h1>
             </div>
         </div>
-    </section>
+        <div class="row">
+            <!-- Section Titile -->
+            <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using Content.</p>
 
+                <div class="find-widget">
+                    Company: <a href="#">HostRiver</a>
+                </div>
+                <div class="find-widget">
+                    Address: <a href="#">4435 Berkshire Circle Knoxville</a>
+                </div>
+                <div class="find-widget">
+                    Phone: <a href="#">+ 879-890-9767</a>
+                </div>
+
+                <div class="find-widget">
+                    Website: <a href="#">www.site.com</a>
+                </div>
+                <div class="find-widget">
+                    Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
+                </div>
+            </div>
+            <!-- contact form -->
+            <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+
+                <form action="{{ route('contact') }}" class="shake" role="form" method="post" id="contactForm"
+                      name="contact-form" data-toggle="validator">
+                {{ csrf_field() }}
+                <!-- Name -->
+                    <div class="form-group label-floating">
+                        <label class="control-label" for="name">Name</label>
+                        <input class="form-control" id="name" type="text" name="name" required
+                               data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- email -->
+                    <div class="form-group label-floating">
+                        <label class="control-label" for="email">Email</label>
+                        <input class="form-control" id="email" type="email" name="email"
+                               data-error="Please enter your Email">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- Subject -->
+                    <div class="form-group label-floating">
+                        <label class="control-label">Subject</label>
+                        <input class="form-control" id="msg_subject" type="text" name="subject" required
+                               data-error="Please enter your message subject">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- Message -->
+                    <div class="form-group label-floating">
+                        <label for="message" class="control-label">Message</label>
+                        <textarea class="form-control" rows="3" id="message" name="message" required
+                                  data-error="Write your message"></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- Form Submit -->
+                    <div class="form-submit mt-5">
+                        <button class="btn btn-common btn-submit" type="submit" id="form-submit"><i
+                                class="material-icons mdi mdi-message-outline"></i> Send Message
+                        </button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+
+
+    // $(document).ready(function () {
+    //     $(".btn-submit").click(function (e) {
+    //         e.preventDefault();
+    //
+    //         var _token = $("input[name='_token']").val();
+    //         var name = $("input[name='name']").val();
+    //         var email = $("input[name='email']").val();
+    //         var subject = $("input[name='subject']").val();
+    //         var message = $("textarea[name='message']").val();
+    //
+    //         $.ajax({
+    //             url: "/contact",
+    //             type: 'POST',
+    //             data: {_token: _token, name: name, email: email, subject: subject, message: message},
+    //             success: function (data) {
+    //                 if ($.isEmptyObject(data.error)) {
+    //                     alert(data.success);
+    //                 } else {
+    //                     alert(data.error);
+    //                 }
+    //             }
+    //         });
+    //
+    //
+    //     });
+    //
+    // });
+
+
+</script>
 </body>
 </html>

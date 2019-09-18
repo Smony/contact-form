@@ -1,7 +1,7 @@
 @component('mail::message')
 # Introduction
 
-Hello {{ $name }}
+Hello, {{ $name }}
 
 Message :
 {{ $message }}
