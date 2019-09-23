@@ -4,5 +4,5 @@
 
 #### Install
 
-* composer require smony/contact
+* composer require smony/contact:master
 * php artisan contact:install
